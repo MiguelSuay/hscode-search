@@ -1,0 +1,19 @@
+{
+  "name": "hscode-search",
+  "version": "1.0.0",
+  "description": "A tool to quick search HS codes by number or description.",
+  "main": "hscode-search.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HSCODE",
+    "HTSCODE",
+    "Trade"
+  ],
+  "author": "Miguel Suay",
+  "license": "ISC",
+  "dependencies": {
+    "fuse.js": "^6.6.2"
+  }
+}
