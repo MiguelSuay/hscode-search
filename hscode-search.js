@@ -1,5 +1,5 @@
-const data = require('./hscode-data.json');
-const Fuse = require('fuse.js');
+import data from './hscode-data.json';
+import Fuse from 'fuse.js';
 
 const options = {
   includeScore: true,
@@ -39,4 +39,5 @@ class HSCodeSearch {
   }
 }
 
-module.exports = HSCodeSearch;
+export default HSCodeSearch;
+
