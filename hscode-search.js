@@ -3,7 +3,7 @@ import Fuse from 'fuse.js';
 
 const options = {
   includeScore: true,
-  keys: ['Description']
+  keys: ['description']
 };
 
 class HSCodeSearch {
@@ -24,10 +24,10 @@ class HSCodeSearch {
       let results = [];
       
       if (!isNaN(query)) { // If it's a number
-        results = this.data.filter(item => item.HSCODE.startsWith(query));
+        results = this.data.filter(item => item.HS.startsWith(query));
         
         if (results.length < 5) {
-          const additionalResults = this.data.filter(item => item.HSCODE.includes(query) && !results.includes(item));
+          const additionalResults = this.data.filter(item => item.HS.includes(query) && !results.includes(item));
           results = results.concat(additionalResults).slice(0, 10);
         }
       } else { 

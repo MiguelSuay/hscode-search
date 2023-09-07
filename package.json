@@ -1,6 +1,6 @@
 {
   "name": "hscode-search",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A tool to quick search HS codes by number or description.",
   "main": "hscode-search.js",
   "scripts": {
