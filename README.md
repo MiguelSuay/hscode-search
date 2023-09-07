@@ -20,7 +20,7 @@ npm install HSCodeSearch --save
 ## Example of React Usage
 
 import React, { useState, useEffect } from 'react';
-import HSCodeSearch from 'HSCodeSearch';
+import HSCodeSearch from 'hscode-search';
 
 const HSCodeSearchComponent = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -29,8 +29,9 @@ const HSCodeSearchComponent = () => {
 
     useEffect(() => {
         if (searchTerm) {
-            const searchResults = searcher.search(searchTerm);
-            setResults(searchResults);
+            searcher.search(searchTerm, (searchResults) => {
+                setResults(searchResults);
+            });
         } else {
             setResults([]);
         }
@@ -48,7 +49,7 @@ const HSCodeSearchComponent = () => {
                 <ul>
                     {results.map((item, index) => (
                         <li key={index}>
-                            {item.HSCODE} - {item.Description}
+                            {item.HS} - {item.description}
                         </li>
                     ))}
                 </ul>
